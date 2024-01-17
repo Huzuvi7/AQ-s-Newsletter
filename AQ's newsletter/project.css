@@ -1,0 +1,154 @@
+body {
+  display: flex;
+  background-image: linear-gradient(#0ed1fd, white);
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0; /* Remove default margins */
+}
+
+header {
+  width: 100%; /* Ensure the header takes up the full width */
+  text-align: center; /* Center-align content within the header */
+  padding: 20px 0; /* Add padding for space */
+}
+
+.upper-left-heading {
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+hr{
+  width: 500px;
+  color: black;
+}
+.about-button {
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+
+.archive-button {
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+/* Add this to your existing styles.css or create a new CSS file */
+.hidden {
+  display: none;
+}
+
+.about-button:hover {
+  background-color: #414141;
+}
+
+.archive-button:hover {
+  background-color: #414141;
+}
+
+/* Add this to your existing project.css or create a new CSS file */
+
+.subscribe-section {
+  padding: 40px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.subscribe-section h2 {
+  margin-bottom: 2px;
+}
+
+.subscribe-section p {
+  margin-bottom: 3px;
+}
+
+#subscriptionForm {
+  display: flex;
+  justify-content: center;
+}
+
+#emailInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 250px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+#emailInput:hover {
+  /* Your hover styles here */
+  /* For example: */
+  transform: scale(1.05);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000000;
+  font-size: 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+.enticement-section {
+  padding: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.enticement-section h2 {
+  margin-bottom: 20px;
+}
+
+.enticement-section p {
+  margin-bottom: 30px;
+}
+
+.responseMessage {
+  position: fixed;
+  text-align: center;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0; /* Initially hide the message */
+  transition: opacity 0.5s ease; /* Transition for opacity */
+}
+
+.heading {
+  font-size: 25px;
+}
+
+.bottom-left-image {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  left: 20px; /* Adjust the distance from the left as needed */
+  width: 100px; /* Adjust the width of the image as needed */
+  height: auto; /* Automatically adjust the height while maintaining the aspect ratio */
+  border-radius: 5px; /* Add rounded corners to the image if desired */
+  /* Add any other styling properties as needed */
+}

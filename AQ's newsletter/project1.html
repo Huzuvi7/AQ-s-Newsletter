@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ's newsletter</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+  </head>
+  <body>
+    <header>
+    <h1 class="upper-left-heading" onclick="reloadPage()">AQ's newsletter</h1>
+    <hr>
+    <br>
+    <a href="about.html" id="aboutButton" class="about-button">About</a>
+    <a href="archive.html" id="archiveButton" class="archive-button">Archive</a>    
+  </header>
+    
+    <section class="subscribe-section">
+      <h1 style="font-size: 47px">Subscribe to Stay updated with the latest insights and investigations in my self-improvement journey.</h1>
+      <p>Enter your email to subscribe:</p>
+      <br>
+      <form id="subscriptionForm" action="connect.php" method="POST">
+          <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+      </form>
+  </section>
+
+  <div id="responseMessage" class="responseMessage"></div>
+
+<script>
+document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var form = event.target;
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        showMessage(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+function showMessage(message) {
+    var responseMessage = document.getElementById("responseMessage");
+    responseMessage.innerHTML = message;
+    responseMessage.style.opacity = "1"; // Show the message
+    responseMessage.style.transition = "opacity 0.5s ease"; // Apply transition
+
+    setTimeout(function() {
+        responseMessage.style.opacity = "0"; // Hide the message
+    }, 7000); // Adjust the time (in milliseconds) for how long the message stays visible
+}
+</script>
+
+<section class="enticement-section">
+  <h2>Join Our Community!</h2>
+  <p>Be the first to receive exclusive content, productivity hacks, and actionable tips delivered directly to your inbox.</p>
+</section>
+
+
+  </html>
+</body>

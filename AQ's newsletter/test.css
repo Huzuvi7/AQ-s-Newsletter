@@ -1,0 +1,40 @@
+/* Styles for the new header */
+.new-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0; /* Change background color */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+/* Centered heading styles */
+.upper-center-heading {
+  text-align: center;
+  margin: 0; /* Reset default margin */
+}
+
+/* Styles for the button section */
+.button-section {
+  display: flex;
+  gap: 20px; /* Adjust space between buttons */
+}
+
+/* Common styles for buttons */
+.about-button,
+.archive-button {
+  padding: 8px 16px; /* Adjust padding as needed */
+  text-decoration: none;
+  color: #000; /* Button text color */
+  border: 1px solid #000; /* Button border color */
+  border-radius: 5px; /* Button border radius */
+  transition: background-color 0.3s ease; /* Button hover transition */
+}
+
+/* Button hover styles */
+.about-button:hover,
+.archive-button:hover {
+  background-color: #000; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Adjust button appearance, positioning, and other styles as needed */

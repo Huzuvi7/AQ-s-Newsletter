@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Archive</title>
+  <link rel="stylesheet" href="archive.css">
+  <script src="archive.css" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1 class="upper-left-heading" onclick="goToLandingPage()">AQ's newsletter</h1>
+    <hr>
+    <br>
+    <a href="about.html" id="aboutButton" class="about-button">About</a>
+    <a href="archive.html" id="archiveButton" class="archive-button">Archive</a>    
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for articles..." onkeyup="searchArticles()">
+  </div>
+  
+  <div class="article-list">
+    <div class="article-box">
+      <a href="https://savagebeast.substack.com/p/upgrade-yourself-like-technology">
+      <h2>Upgrade Yourself Like Technology</h2>
+      <p>A bizarre analogy</p>
+      </a>
+    </div>
+    <div class="article-box">
+      <a href="https://savagebeast.substack.com/p/distraction-addictions-lil-brotherlol"> 
+      <h2>Distraction: Addiction's lil brother...lol</h2>
+      <p>A fascinating connection</p>
+      </a>
+    </div>
+
+    <div class="article-box">
+      <a href="https://savagebeast.substack.com/p/being-decisive"> 
+      <h2>Being decisive.</h2>
+      <p>One way to reduce anxiety</p>
+      </a>
+    </div>
+
+    <div class="article-box">
+      <a href="https://savagebeast.substack.com/p/addiction-and-recovery"> 
+      <h2>ADDICTION and RECOVERY...</h2>
+      <p>Not for everyone!</p>
+      </a>
+    </div>
+
+    <div class="article-box">
+      <a href="https://savagebeast.substack.com/p/suffering-the-necessary-evil"> 
+      <h2>Suffering - The necessary evil</h2>
+      <p>A personal excerpt</p>
+      </a>
+    </div>
+    <!-- Add more article boxes as needed -->
+  </div>
+
+  
+  <script>
+    function searchArticles() {
+  let input = document.getElementById('searchInput');
+  let filter = input.value.toLowerCase();
+  let articles = document.querySelectorAll('.article-box');
+
+  articles.forEach(article => {
+    let title = article.querySelector('h2');
+    let subtitle = article.querySelector('p');
+    if (title.innerHTML.toLowerCase().indexOf(filter) > -1 || subtitle.innerHTML.toLowerCase().indexOf(filter) > -1) {
+      article.style.display = '';
+    } else {
+      article.style.display = 'none';
+    }
+  });
+}
+
+    function goToLandingPage() {
+        window.location.href = "project1.html"; // Replace 'landing_page.html' with the URL of your landing page
+    }
+  </script>
+
+</body>
+</html>
